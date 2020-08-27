@@ -1,11 +1,21 @@
 
+/**
+ * 
+ * @author Jacob Dorning
+ * @version first version
+ * @description this class will contain variables and methods to mimic a real life club
+ *
+ */
 public class Club {
-  private String clubName;
+
+	private String clubName;
 	private int points;
+	private int gamesPlayed;
 	
 	public Club(String clubName) {
 		this.clubName = clubName;
 		this.points = 0;
+		this.gamesPlayed = 0;
 	}
 	
 	/*
@@ -28,6 +38,9 @@ public class Club {
 			addPoints(1);
 			name.addPoints(1);
 		}
+		playedGame();
+		name.playedGame();
+		
 	}
 	
 	
@@ -40,15 +53,24 @@ public class Club {
 	}
 	
 	/**
-	 * 
+	 * getter method for points variable
 	 * @return returns the points variable for the club
 	 */
 	public int getPoints() {
 		return points;
 	}
 	
-	
+	/*
+	 * adds the given amount of points to the points variable
+	 */
 	public void addPoints(int pointsAdded) {
 		points += pointsAdded;
 	}
+	
+	public void playedGame() {
+		gamesPlayed++;
+	}
+	
+	
+	
 }
